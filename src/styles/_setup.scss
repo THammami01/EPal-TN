@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(./fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url(./fonts/Montserrat-SemiBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: Montserrat-SemiBold;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  outline: none;
+  border: none;
+  padding: .5rem;
+  font-size: .8rem;
+  font-family: Montserrat-Regular;
+  border-radius: .3rem;
+}
+
+button, svg, li {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}

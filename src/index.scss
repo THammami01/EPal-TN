@@ -1,0 +1,140 @@
+@import "styles/setup";
+
+// SETUP
+
+:root {
+  --color1: #f5f5f5; // font-color
+  --color2: #302f3d; // header bg
+  --color3: #120e1b; // bg
+  --color4: #7041e6; // alt font-color
+
+  --btn1: #21212c;
+  --btn1-hovered: #4f4e60;
+  --btn2-hovered: #8d65ea;
+}
+
+/* Hide scrollbar for Chrome */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  background-color: var(--color3);
+  scroll-behavior: smooth;
+  font-family: Montserrat-SemiBold;
+  height: 200vh;
+}
+
+.top-header {
+  color: var(--color1);
+  background-color: var(--color2);
+  padding: 0 1rem;
+  height: 4rem;
+  display: flex;
+  justify-self: center;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.1rem;
+
+  .left-side {
+    display: flex;
+    justify-self: center;
+    align-items: stretch;
+    gap: 2rem;
+
+    .e-pal {
+      padding: 0.75rem 0;
+      height: 4rem;
+      width: 120px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      margin-left: 2rem;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        transition: color 300ms;
+        box-sizing: border-box;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 0.25rem solid var(--color2);
+        border-bottom: 0.25rem solid var(--color2);
+
+        &:hover {
+          color: var(--color4);
+          border-bottom-color: var(--color4);
+        }
+
+        &.selected {
+          color: var(--color4);
+          border-bottom-color: var(--color4);
+        }
+      }
+    }
+
+    .select-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        padding: 0 0.2rem;
+        height: 2rem;
+        border-radius: 0.1rem;
+        transition: background 200ms;
+        &:hover {
+          cursor: pointer;
+          background-color: #21212c;
+        }
+        > * {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    justify-self: flex-end;
+
+    button {
+      font-size: 0.9rem;
+      background: #7041e6;
+      padding: 0.3rem;
+      width: 5.5rem;
+      height: 2rem;
+      transition: background 300ms;
+
+      &:first-of-type {
+        background-color: var(--btn1);
+        &:hover {
+          background-color: var(--btn1-hovered);
+        }
+      }
+
+      &:nth-of-type(2) {
+        background-color: var(--color4);
+        &:hover {
+          background-color: var(--btn2-hovered);
+        }
+      }
+    }
+  }
+}
