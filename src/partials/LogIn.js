@@ -22,6 +22,7 @@ const LogIn = () => {
           variant="filled"
           placeholder="Please enter your email"
           size="md"
+          autoComplete="on"
         />
         {/* Add text and it will appear, Invalid email/password.. */}
         <FormHelperText color="red.500" mt="0.3rem">

@@ -39,7 +39,12 @@
     display: flex;
     align-items: flex-start;
     gap: .75rem;
+
     label {
+      font-size: .7rem;
+    }
+    
+    a {
       font-size: .7rem;
     }
   }
@@ -47,7 +52,7 @@
   .contact-us {
     font-size: .7rem;
     display: block;
-    margin-top: .75rem;
+    margin-top: .61rem;
     text-align: center;
   }
 }
