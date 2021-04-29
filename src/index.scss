@@ -138,3 +138,14 @@ body {
     }
   }
 }
+
+
+.login-signup-model-header {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  background-color: var(--btn1);
+}

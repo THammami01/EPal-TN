@@ -1,0 +1,53 @@
+.log-in,
+.sign-up {
+  --color4: #7041e6; // alt font-color
+  --btn2-hovered: #8d65ea;
+
+  font-size: 1rem;
+
+  button,
+  label,
+  input {
+    font-size: 0.9rem;
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: var(--btn2-hovered);
+    font-size: 0.8rem;
+  }
+
+  .main-btn {
+    display: block;
+    margin: 1rem auto 0;
+    background-color: var(--color4);
+    padding: 0.3rem 0;
+    width: 10rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: var(--btn2-hovered);
+    }
+  }
+
+  .agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    label {
+      font-size: .7rem;
+    }
+  }
+
+  .contact-us {
+    font-size: .7rem;
+    display: block;
+    margin-top: .75rem;
+    text-align: center;
+  }
+}

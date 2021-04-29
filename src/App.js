@@ -1,20 +1,12 @@
-import { ChakraProvider, useColorMode } from "@chakra-ui/react";
-import { useEffect } from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 import Header from "./partials/Header";
-
-const Example = () => {
-  const { toggleColorMode } = useColorMode();
-  useEffect(() => {
-    toggleColorMode();
-  }, []);
-  return <></>;
-};
+import SwitchToDarkTheme from "./useful/SwitchToDarkTheme";
 
 const App = () => {
   return (
     <ChakraProvider>
       <Header />
-      <Example />
+      <SwitchToDarkTheme />
     </ChakraProvider>
   );
 };
