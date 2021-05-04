@@ -13,21 +13,23 @@ import {
   TabPanels,
   TabPanel,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AppContext } from "../App";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
+import ProfileTab from "./ProfileTab";
 
 const HeaderRightSide = () => {
+  const { mainData } = useContext(AppContext);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [tabIndex, setTabIndex] = useState(0);
+
   const style1 = {
     padding: "0",
   };
   const style2 = {
     outlineColor: "transparent",
   };
-
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [tabIndex, setTabIndex] = useState(0);
 
   const handleTabsChange = (index) => {
     setTabIndex(index);
@@ -45,8 +47,14 @@ const HeaderRightSide = () => {
 
   return (
     <div className="right-side">
-      <button onClick={handleLoginClick}>Log In</button>
-      <button onClick={handleSignupClick}>Sigh Up</button>
+      {mainData === null ? (
+        <>
+          <button onClick={handleLoginClick}>Log In</button>
+          <button onClick={handleSignupClick}>Sigh Up</button>
+        </>
+      ) : (
+        <ProfileTab />
+      )}
 
       <Modal isOpen={isOpen} onClose={onClose} closeOnOverlayClick={false}>
         <ModalOverlay />
@@ -66,15 +74,19 @@ const HeaderRightSide = () => {
           <ModalBody>
             <Tabs index={tabIndex} onChange={handleTabsChange} isFitted>
               <TabList>
-                <Tab borderRadius="0" _hover={{borderRadius: "0"}}>Log In</Tab>
-                <Tab borderRadius="0" _hover={{borderRadius: "0"}}>Sign Up</Tab>
+                <Tab borderRadius="0" _hover={{ borderRadius: "0" }}>
+                  Log In
+                </Tab>
+                <Tab borderRadius="0" _hover={{ borderRadius: "0" }}>
+                  Sign Up
+                </Tab>
               </TabList>
               <TabPanels>
                 <TabPanel>
-                  <LogIn />
+                  <LogIn onClose={onClose} />
                 </TabPanel>
                 <TabPanel>
-                  <SignUp />
+                  <SignUp onClose={onClose} />
                 </TabPanel>
               </TabPanels>
             </Tabs>

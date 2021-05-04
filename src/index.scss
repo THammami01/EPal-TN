@@ -26,10 +26,11 @@ body {
   background-color: var(--color3);
   scroll-behavior: smooth;
   font-family: Montserrat-SemiBold;
-  height: 200vh;
 }
 
 .top-header {
+  position: fixed;
+  width: 100vw;
   color: var(--color1);
   background-color: var(--color2);
   padding: 0 1rem;
@@ -40,6 +41,7 @@ body {
   justify-content: space-between;
   gap: 2rem;
   font-size: 1.1rem;
+  z-index: 2; 
 
   .left-side {
     display: flex;
@@ -148,8 +150,4 @@ body {
   align-items: center;
   gap: .75rem;
   background-color: var(--btn1);
-}
-
-.container {
-  padding: 3rem;
 }

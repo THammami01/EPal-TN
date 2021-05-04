@@ -1,0 +1,179 @@
+.avatar {
+  border-radius: 50%;
+  width: 2.5rem;
+  border: 0.1rem solid white;
+  cursor: pointer;
+
+  &.drawer-avatar {
+    display: inline;
+    border: none;
+  }
+}
+
+.profile-drawer {
+  --color1: #f5f5f5; // font-color
+  --color1-alt: #bdb8b8; // font-color
+  --color2: #302f3d; // header bg
+  --color3: #120e1b; // bg
+  --color3-alt: #120e1b;
+  --color4: #7041e6; // alt font-color
+  --color4-alt: #7b62ba; // alt font-color
+
+  font-size: 0.85rem;
+  .top-profile {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+
+    h3 {
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  .select-status {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--color3) !important;
+    border-radius: 5rem !important;
+    cursor: pointer;
+
+    // svg {
+    //   color: orange;
+    // }
+  }
+
+  .status-item {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color3);
+    }
+  }
+
+  .popover-content {
+    &:focus {
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+  .popover-body {
+    &:focus {
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .selections {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    > div {
+      display: inline-block;
+      width: 25%;
+      padding: 0.5rem 0.3rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+
+      p {
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      label {
+        font-size: 0.6rem;
+        color: var(--color1-alt);
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: var(--color3);
+      }
+    }
+  }
+
+  .orders {
+    display: flex;
+    text-align: center;
+    background-color: var(--color3-alt);
+    border-radius: 0.5rem;
+
+    div {
+      cursor: pointer;
+      padding: 0.75rem 0;
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+
+      svg {
+        color: var(--color4) !important;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .epal-plus {
+    cursor: pointer;
+    > div {
+      border-radius: .5rem;
+      padding: 1rem 1rem;
+      align-items: center;
+
+      p:first-of-type {
+        display: flex;
+        gap: .25rem;
+      }
+    }
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  .become-epal {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--color4-alt);
+
+    svg {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      background-color: var(--color3-alt);
+    }
+  }
+
+  .settings {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    svg {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      background-color: var(--color3-alt);
+    }
+  }
+}

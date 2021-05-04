@@ -1,0 +1,317 @@
+.setting {
+  --color1: #120e1b;
+  --color2: #aa8da4;
+  --color3: #7041e6; // alt font-color
+  --color4: #8d65ea;
+  --color5: #21212c;
+  --color6: #e53e3e;
+
+  display: flex;
+  font-size: 0.9rem;
+
+  button {
+    width: fit-content;
+    padding: 0.3rem 1rem;
+    border-radius: 3rem;
+    transition: background 300ms;
+    background-color: var(--color1);
+  }
+}
+
+.setting > .left-side-bar {
+  min-width: 15.5rem;
+  width: 12%;
+  padding: 5rem 1rem 1rem;
+
+  > div {
+    width: 13rem;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    > label {
+      padding: 0.5rem 0.75rem;
+      color: var(--color2);
+      font-size: 0.8rem;
+    }
+
+    > hr {
+      margin: 0.75rem 0;
+      width: 100%;
+    }
+
+    > a > div,
+    > div {
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--color1);
+      }
+    }
+  }
+}
+
+.setting > .main-content {
+  padding: 6rem 3rem 2rem;
+  width: 85%;
+  min-height: 100vh;
+  background-color: var(--color1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  > h1 {
+    font-size: 1.2rem;
+  }
+
+  > h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  hr {
+    width: 40rem;
+  }
+
+  &.profile {
+    > .avatar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      > .avatar-text {
+        display: flex;
+        gap: 1rem;
+
+        > img {
+          border-radius: 50%;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          p {
+            font-size: 0.8rem;
+            color: var(--color2);
+          }
+
+          button {
+            background-color: var(--color3);
+            &:hover {
+              background-color: #8d65ea;
+            }
+          }
+        }
+      }
+    }
+
+    > .information-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      > button {
+        border: 0.1rem solid var(--color2);
+      }
+    }
+
+    > .details-section {
+      div {
+        display: flex;
+        margin-bottom: 0.75rem;
+        p {
+          min-width: 8rem;
+          &:first-child {
+            color: var(--color2);
+          }
+        }
+      }
+    }
+
+    .submit-error {
+      margin-top: -0.5rem;
+      color: var(--color6);
+      font-size: 0.9rem;
+    }
+  }
+
+  &.myaccount {
+    > .information-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      hr {
+        margin: 0.25rem 0;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        min-height: 2rem;
+        gap: 1rem;
+
+        label {
+          color: var(--color2);
+          width: 10rem;
+        }
+
+        p {
+          width: 15rem;
+        }
+
+        svg {
+          font-size: 1.5rem;
+        }
+
+        button {
+          width: 6rem;
+          background-color: var(--color3);
+          &:hover {
+            background-color: #8d65ea;
+          }
+        }
+
+        .phone {
+          width: 15rem;
+          margin-right: 1rem;
+          p {
+            color: var(--color6);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+          }
+        }
+
+        .delete-btn {
+          background-color: inherit;
+          border: 0.1rem solid var(--color2);
+          &:hover {
+            background-color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  &.notification,
+  &.privacy {
+    .first-section {
+      width: 40rem;
+      > div {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        p {
+          color: var(--color2);
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          width: 30rem;
+        }
+      }
+
+      hr {
+        margin: 0.25rem 0;
+      }
+
+      button {
+        width: 6rem;
+        background-color: var(--color3);
+        &:hover {
+          background-color: #8d65ea;
+        }
+      }
+    }
+  }
+
+  &.website-log {
+    .log-card {
+      width: 40rem;
+
+      .bg-img {
+        border-radius: 1rem 1rem 0 0;
+      }
+
+      .log {
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-radius: 0 0 1rem 1rem;
+        background-color: var(--color5);
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          label {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.delete-account-model-body {
+  p:last-of-type {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #aa8da4;
+  }
+}
+
+.delete-account-btns {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    width: 6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    transition: background 300ms;
+
+    &:first-child {
+      border: 0.1rem solid var(--color2);
+      &:hover {
+        background-color: var(--color2);
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: #ff0000;
+    }
+  }
+}
+
+.password-btn {
+  width: 6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  transition: background 300ms;
+
+  &.cancel {
+    margin-right: 0.5rem;
+    border: 0.1rem solid var(--color2);
+    &:hover {
+      background-color: var(--color2);
+    }
+  }
+
+  &.save {
+    background-color: #7041e6;
+    &:hover {
+      background-color: #8d65ea;
+    }
+  }
+}

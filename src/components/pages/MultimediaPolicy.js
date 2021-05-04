@@ -1,5 +1,5 @@
 const MultimediaPolicy = () => {
-  return <div>Multimedia Policy</div>;
+  return <div className="page-container">Multimedia Policy</div>;
 };
 
 export default MultimediaPolicy;

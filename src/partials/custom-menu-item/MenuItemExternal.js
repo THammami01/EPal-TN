@@ -10,9 +10,11 @@ const MenuItemAltered = ({ title, url }) => {
   const hoverStyle = { background: "#7041e6" };
 
   return (
-    <MenuItem style={style} _hover={hoverStyle}>
-      <a href={`https://${url}`} target="_blank">{ title }</a>
-    </MenuItem>
+    <a href={`https://${url}`} target="_blank" rel="noreferrer">
+      <MenuItem style={style} _hover={hoverStyle}>
+        {title}
+      </MenuItem>
+    </a>
   );
 };
 

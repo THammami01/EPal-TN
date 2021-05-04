@@ -1,14 +1,34 @@
 import { Menu, MenuButton, MenuDivider, MenuList } from "@chakra-ui/menu";
-import { useState } from "react";
-import { useHistory } from "react-router";
+import { useEffect, useState } from "react";
+import { useHistory, useLocation } from "react-router";
 import { navElements } from "../useful/navElements";
 import MenuItemAltered from "./custom-menu-item/MenuItemAltered";
 import MenuItemExternal from "./custom-menu-item/MenuItemExternal";
 import MenuItemHead from "./custom-menu-item/MenuItemHead";
 
 const HeaderLeftSide = () => {
-  const [selectedNav, setSelectedNav] = useState("ePal");
+  const [selectedNav, setSelectedNav] = useState("");
+  const location = useLocation();
   const history = useHistory();
+
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/":
+        setSelectedNav("ePal");
+        break;
+      case "/chill":
+        setSelectedNav("Chill");
+        break;
+      case "/posts":
+        setSelectedNav("Posts");
+        break;
+      case "/how-it-works":
+        setSelectedNav("How it Works");
+        break;
+      default:
+        setSelectedNav("");
+    }
+  }, []);
 
   const handleNavChange = (e) => {
     const { title, url } = navElements.find(
@@ -50,6 +70,7 @@ const HeaderLeftSide = () => {
           <li
             className={selectedNav === title ? "selected" : ""}
             onClick={handleNavChange}
+            key={title}
           >
             {title}
           </li>

@@ -1,5 +1,5 @@
 const CommunityGuidelines = () => {
-  return <div>Community Guidelines</div>;
+  return <div className="page-container">Community Guidelines</div>;
 };
 
 export default CommunityGuidelines;
